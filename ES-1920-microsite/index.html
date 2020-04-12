@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>p5.js template | index</title>
+
+	<!-- load style sheets -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/landing.css">
+
+
+</head>
+
+<body>
+	<div class='container'>
+		<header>
+			<ul class='menu'>
+				<li><a href='./index.html'>index</a></li>
+				<li><a href='./fullscreen.html'>fullscreen</a></li>
+				<li><a href='./process.html'>process</a></li>
+				<li><a href='./gallery.html'>gallery</a></li>
+				<li><a href='./video.html'>video</a></li>
+			</ul>
+		</header>
+
+		<div id="landing">
+			<div class="overlay">
+				<h2>PSYCH.</h2>
+			</div>
+			<span id="down">&#8595;</span>
+		</div>
+		<div id="project-info">
+			<h2>Project Description</h2>
+			<p>Psych. is an audio-visual project using the MakeNoise (audio) and P5JS (visuals). For this project, I have circled my ideas around shapes and lines. 
+                </p>
+            <p> As this is my first time working with both visuals and audio, I've decided to keep things simple and to a minimum. I guess the title 'Psych.' sits well with the soundtrack as the sounds used were heavily procressed and driven. As much as we all are captivated and intrigued by things we don’t see very often, I chose to create visuals that are safe. These are shapes we tend to see on a daily basis. They are geometric shapes; and these shapes takes the form of whatever we see on a daily basis. My inspiration was from Joanie Lemercier’s works.</p>
+			<p>Have a look at my <a href="#" target="https://www.tumblr.com/blog/imnotshazlina">tumblr</a>, my <a href="#" target="https://editor.p5js.org/shzshzlina/sketches">p5js sketches</a>
+			</p>
+			<p>Hello, I'm Shazlina. I'm currently a student studying Electronic Music in Lasalle College of the Arts, Singapore. I work as a sound technical crew for events in Singapore. </p>
+		</div>
+	</div>
+
+	<footer>
+		<p>A project by Shazlina.<br />2020</p>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onbeforeunload = function() {
+			window.scrollTo(0, 0);
+		}
+
+		$(document).ready(function() {
+			$('#down').on('click', function() {
+				$("html").scrollTop(0);
+				$('html, body').animate({
+					scrollTop: $("#project-info").offset().top
+				}, 1000);
+			});
+		});
+	</script>
+</body></html>
